@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- external css -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <!-- bootstrap icon cdn -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <!-- google font -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Black+Ops+One&family=Changa+One:ital@0;1&family=Croissant+One&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Noto+Sans+JP:wght@100..900&family=Ole&family=Tai+Heritage+Pro:wght@400;700&display=swap"
+    rel="stylesheet" />
+
+
+  <title>Hello, world!</title>
+</head>
+
+<body class="contact-page">
+  <nav class="navbar sticky-top navbar-expand-lg navbar-dark" style="background-color: #0f3040">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <h3 style="color: lightskyblue;"><b>Apna Ghar</b></h3>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="container-fluid d-flex justify-content-end">
+          <div class="row d-flex">
+            <div class="col-12">
+              <ul class="navbar-nav  mb-2 mb-lg-0 ">
+                <li class="nav-item">
+                  <a class="nav-link active fs-5 ms-3" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active ms-3 fs-5" aria-current="page" href="services.html">services</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active ms-3 fs-5" aria-current="page" href="review.html" id="reviewNavLink">review <span id="reviewCountBadge" class="badge bg-danger ms-1">0</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active ms-3 fs-5" aria-current="page" href="contact.html">contact</a>
+                </li>
+              
+                  
+
+            
+              </ul>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+      
+      <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+    </div>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#signupModal">
+ signup
+</button>
+  </nav>
+  <!-- Button trigger modal -->
+
+
+<!-- login Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="loginModalLabel">Login to Apna Ghar</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="loginForm">
+          <div class="mb-3">
+            <label class="form-label" for="loginEmail">Email address</label>
+            <input class="form-control" id="loginEmail" type="email" required />
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="loginPassword">Password</label>
+            <input class="form-control" id="loginPassword" type="password" required />
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary" form="loginForm">Login</button>
+        
+
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="signupModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="signupForm">
+  <div class="mb-3">
+    <label for="signupInputEmail1" class="form-label">Email address</label>
+    <input type="email" class="form-control" id="signupInputEmail1" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+  </div>
+  <div class="mb-3 ">
+    <label for="signupInputPassword1" class="form-label">Password</label>
+    <input type="password" class="form-control" id="signupInputPassword1">
+  </div>
+  <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+</form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary" form="signupForm">submit</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <main class="container py-5">
+    <div class="text-center mb-5">
+      <p class="text-primary fw-bold mb-2">OUR SERVICES</p>
+      <h1>Everything you need to find your home</h1>
+      <p class="text-muted mx-auto" style="max-width: 42rem;">Apna Ghar helps you search, compare, visit, and move into a place you will love.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-12 col-md-6 col-lg-4"><article class="card h-100 shadow-sm p-4"><i class="bi bi-house-door-fill fs-1 text-primary"></i><h2 class="h4 mt-3">Buy a home</h2><p class="text-muted mb-0">Find verified homes and compare properties that match your budget and needs.</p></article></div>
+      <div class="col-12 col-md-6 col-lg-4"><article class="card h-100 shadow-sm p-4"><i class="bi bi-key-fill fs-1 text-primary"></i><h2 class="h4 mt-3">Rent a home</h2><p class="text-muted mb-0">Browse rental properties and connect with owners for your next place.</p></article></div>
+      <div class="col-12 col-md-6 col-lg-4"><article class="card h-100 shadow-sm p-4"><i class="bi bi-calendar-check-fill fs-1 text-primary"></i><h2 class="h4 mt-3">Schedule a visit</h2><p class="text-muted mb-0">Shortlist properties and arrange a convenient site visit with our team.</p></article></div>
+    </div>
+  </main>
+
+  <div class="container-fluid" style="background-color: #e3f2fd;"><div class="row d-flex align-items-center justify-content-around"><div class="col-3 mt-5"><ul class="list-unstyled text-primary"><li class="h5 text-dark">Quick Links</li><li>Home</li><li>About Us</li><li>Services</li><li>Contact</li></ul></div><div class="col-3 mt-5"><ul class="list-unstyled"><li class="h5">Connect Us</li><li class="mb-2"><i class="bi bi-facebook"></i></li><li class="mb-2"><i class="bi bi-instagram"></i></li><li class="mb-2"><i class="bi bi-linkedin"></i></li><li class="mb-2"><i class="bi bi-twitter"></i></li></ul></div><div class="col-3 mt-5"><ul class="list-unstyled"><li class="h5">Get to Know Us</li><li>Careers</li><li>Blog</li><li>About Apna Ghar</li><li>Investor Relations</li></ul></div></div></div>
+  <div class="container-fluid" style="background-color: #0b2947;"><div class="row text-center p-3 text-white"><div class="col-12 mt-2"><div class="footer-panel4"><div class="pages"><a>Conditions of Use</a> <a>Privacy Notice</a> <a>Consumer Health Data Privacy Disclosure</a> <a>Our Ads Privacy Choices</a></div><div class="copyright"><p>© 2026 Apna Ghar. All rights reserved.</p></div></div></div></div></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+</html>

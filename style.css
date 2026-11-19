@@ -1,0 +1,151 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans';
+}
+
+html {
+    overflow-x: hidden;
+}
+
+.carousel-image {
+    height: clamp(340px, 58vw, 600px);
+    object-fit: cover;
+    background-position: center;
+}
+
+.navbar-brand h3 {
+    margin: 0;
+}
+
+.navbar .form-control {
+    min-width: 0;
+}
+
+.property-card {
+    height: 100%;
+}
+
+.property-card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.property-card .card-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.property-card .btn {
+    align-self: flex-start;
+    margin-top: auto;
+}
+
+.hero-action:hover{
+    transform: translateY(-4px) scale(1.1);
+
+}
+.btn.hero-action{
+    transition: transform 0.3s ease;
+}
+.property-card:hover{
+        transform: translateY(-3px) scale(1.1);
+
+}
+.property-card{
+    transition: all 0.3s;
+}
+
+@media (max-width: 991.98px) {
+    .navbar .d-flex {
+        width: 100%;
+        margin-top: 0.75rem;
+    }
+
+    .navbar .form-control {
+        flex: 1 1 auto;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .carousel-image {
+        height: 420px;
+    }
+
+    .carousel-caption {
+        right: 10%;
+        left: 10%;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .carousel-image {
+        height: 340px;
+    }
+
+    .carousel-caption h5 {
+        font-size: 1.1rem;
+    }
+
+    .carousel-caption p {
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .carousel-caption .btn {
+        margin: 0.2rem !important;
+        padding: 0.35rem 0.55rem;
+    }
+}
+
+@media (hover: none) {
+    .hero-action:hover,
+    .property-card:hover {
+        transform: none;
+    }
+}
+
+#reviewCardsContainer .review-card-col {
+  display: flex;
+}
+
+#reviewCardsContainer .review-card-col .card {
+  width: 22rem;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* Keeps the review page footer at the bottom when there are few or no cards. */
+body.review-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+body.review-page main {
+  flex: 1 0 auto;
+}
+
+body.contact-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+body.contact-page main {
+  flex: 1 0 auto;
+}
+
+body.service-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+body.service-page main {
+  flex: 1 0 auto;
+}
+
+                

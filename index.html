@@ -1,0 +1,585 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- external css -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <!-- bootstrap icon cdn -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <!-- google font -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Black+Ops+One&family=Changa+One:ital@0;1&family=Croissant+One&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Noto+Sans+JP:wght@100..900&family=Ole&family=Tai+Heritage+Pro:wght@400;700&display=swap"
+    rel="stylesheet" />
+
+
+  <title>Hello, world!</title>
+</head>
+
+<body>
+  <nav class="navbar sticky-top navbar-expand-lg navbar-dark" style="background-color: #0f3040">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <h3 style="color: lightskyblue;"><b>Apna Ghar</b></h3>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="container-fluid d-flex justify-content-end">
+          <div class="row d-flex">
+            <div class="col-12">
+              <ul class="navbar-nav  mb-2 mb-lg-0 ">
+                <li class="nav-item">
+                  <a class="nav-link active fs-5 ms-3" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active ms-3 fs-5" aria-current="page" href="services.html">services</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active ms-3 fs-5" aria-current="page" href="review.html" id="reviewNavLink">review <span id="reviewCountBadge" class="badge bg-danger ms-1">0</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active ms-3 fs-5" aria-current="page" href="contact.html">contact</a>
+                </li>
+              
+                  
+
+            
+              </ul>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+      
+      <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+    </div>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#signupModal">
+ signup
+</button>
+  </nav>
+  <!-- Button trigger modal -->
+
+
+<!-- login Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="loginModalLabel">Login to Apna Ghar</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="loginForm">
+          <div class="mb-3">
+            <label class="form-label" for="loginEmail">Email address</label>
+            <input class="form-control" id="loginEmail" type="email" required />
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="loginPassword">Password</label>
+            <input class="form-control" id="loginPassword" type="password" required />
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary" form="loginForm">Login</button>
+        
+
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="signupModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="signupForm">
+  <div class="mb-3">
+    <label for="signupInputEmail1" class="form-label">Email address</label>
+    <input type="email" class="form-control" id="signupInputEmail1" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+  </div>
+  <div class="mb-3 ">
+    <label for="signupInputPassword1" class="form-label">Password</label>
+    <input type="password" class="form-control" id="signupInputPassword1">
+  </div>
+  <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+</form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary" form="signupForm">submit</button>
+      </div>
+    </div>
+  </div>
+</div>
+  <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item">
+        <img src="images/flat-1.avif" class="d-block w-100 carousel-image" alt="Featured apartment exterior" />
+        <div class="carousel-caption d-block">
+          <h5>First slide label</h5>
+          <p>Some representative placeholder content for the first slide.</p>
+          <button type="button" class="btn btn-primary ms-2 hero-action">
+            Primary
+          </button>
+          <button type="button" class="btn btn-danger ms-2 hero-action">
+            danger
+          </button>
+          <button type="button" class="btn btn-success ms-2 hero-action">
+            Success
+          </button>
+        </div>
+      </div>
+      <div class="carousel-item active">
+        <img src="images/flat-4.avif" class="d-block w-100 carousel-image" alt="Featured property exterior" />
+        <div class="carousel-caption d-block">
+          <h5>Second slide label</h5>
+          <p>Some representative placeholder content for the second slide.</p>
+          <button type="button" class="btn btn-primary ms-2 hero-action">
+            Primary
+          </button>
+          <button type="button" class="btn btn-danger ms-2 hero-action">
+            danger
+          </button>
+          <button type="button" class="btn btn-success ms-2 hero-action">
+            Success
+          </button>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="images/flat-3.avif" class="d-block w-100 carousel-image" alt="Featured housing exterior" />
+        <div class="carousel-caption d-block">
+          <h5>Third slide label</h5>
+          <p>Some representative placeholder content for the third slide.</p>
+          <button type="button" class="btn btn-primary ms-2 hero-action">
+            Primary
+          </button>
+          <button type="button" class="btn btn-danger ms-2 hero-action">
+            Secondary
+          </button>
+          <button type="button" class="btn btn-success ms-2 hero-action">
+            Success
+          </button>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <div class="container-fluid" >
+    <div class="row g-4  mt-4 mb-5">
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card property-card" style="width: 22rem;">
+          <div id="propertyCarousel1" class="carousel slide property-carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#propertyCarousel1" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#propertyCarousel1" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#propertyCarousel1" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="images/flat-1.avif" class="d-block w-100" alt="Living room">
+              </div>
+              <div class="carousel-item">
+                <img src="images/flat-2.avif" class="d-block w-100" alt="Bedroom">
+              </div>
+              <div class="carousel-item">
+                <img src="images/flat-3.avif" class="d-block w-100" alt="Kitchen">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#propertyCarousel1"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#propertyCarousel1"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">2 BHK Apartment — Andheri</h5>
+            <p class="card-text">2 BHK • 950 sqft • ₹75,000/month • Close to metro and market.</p>
+            <a href="#" class="btn btn-primary align-self-center add-to-review">Add to review</a>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card property-card" style="width: 22rem;">
+          <div id="propertyCarousel2" class="carousel slide property-carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#propertyCarousel2" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#propertyCarousel2" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#propertyCarousel2" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="images/flat-2.avif" class="d-block w-100" alt="Exterior view">
+              </div>
+              <div class="carousel-item">
+                <img src="images/flat-4.avif" class="d-block w-100" alt="Balcony view">
+              </div>
+              <div class="carousel-item">
+                <img src="images/flat-1.avif" class="d-block w-100" alt="Living area">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#propertyCarousel2"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#propertyCarousel2"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">3 BHK Spacious Flat — Bandra</h5>
+            <p class="card-text">3 BHK • 1,400 sqft • ₹1,50,000/month • Sea view, gated community.</p>
+            <a href="#" class="btn btn-primary align-self-center add-to-review">Add to review</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card property-card" style="width: 22rem;">
+          <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="images/flat-3.avif" class="d-block w-100" alt="Studio interior">
+              </div>
+              <div class="carousel-item">
+                <img src="images/flat-4.avif" class="d-block w-100" alt="Living space">
+              </div>
+              <div class="carousel-item">
+                <img src="images/flat-1.avif" class="d-block w-100" alt="Compact kitchen">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+
+          <div class="card-body">
+            <h5 class="card-title">1 BHK Cozy Studio — Powai</h5>
+            <p class="card-text">1 BHK • 420 sqft • ₹28,000/month • Ideal for singles and young couples.</p>
+
+            <a href="#" class="btn btn-primary justify-content-center align-self-center add-to-review">Add to review</a>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  <div class="container-fluid" >
+    <div class="row g-4  mt-4 mb-5">
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card property-card" style="width: 22rem;">
+          <div id="propertyCarousel1" class="carousel slide property-carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#propertyCarousel1" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#propertyCarousel1" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#propertyCarousel1" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="images/flat-4.avif" class="d-block w-100" alt="Villa exterior">
+              </div>
+              <div class="carousel-item">
+                <img src="images/flat-1.avif" class="d-block w-100" alt="Living area">
+              </div>
+              <div class="carousel-item">
+                <img src="images/flat-2.avif" class="d-block w-100" alt="Garden view">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#propertyCarousel1"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#propertyCarousel1"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">4 BHK Luxury Villa — Lonavala</h5>
+            <p class="card-text">4 BHK • 2,800 sqft • ₹4,50,000/month • Private garden & parking.</p>
+            <a href="#" class="btn btn-primary align-self-center add-to-review">Add to review</a>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card property-card" style="width: 22rem;">
+          <div id="propertyCarousel2" class="carousel slide property-carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#propertyCarousel2" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#propertyCarousel2" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#propertyCarousel2" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="images/flat-1.avif" class="d-block w-100" alt="Modern exterior">
+              </div>
+              <div class="carousel-item">
+                <img src="images/flat-3.avif" class="d-block w-100" alt="Dining area">
+              </div>
+              <div class="carousel-item">
+                <img src="images/flat-4.avif" class="d-block w-100" alt="Balcony view">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#propertyCarousel2"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#propertyCarousel2"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">2 BHK Modern Apartment — Thane</h5>
+            <p class="card-text">2 BHK • 1,050 sqft • ₹65,000/month • Well-connected, amenities included.</p>
+            <a href="#" class="btn btn-primary align-self-center add-to-review">Add to review</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card property-card" style="width: 22rem;">
+          <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="images/flat-2.avif" class="d-block w-100" alt="Compact living">
+              </div>
+              <div class="carousel-item">
+                <img src="images/flat-1.avif" class="d-block w-100" alt="Functional kitchen">
+              </div>
+              <div class="carousel-item">
+                <img src="images/flat-3.avif" class="d-block w-100" alt="Bedroom view">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+
+          <div class="card-body">
+            <h5 class="card-title">Studio with Utilities — Navi Mumbai</h5>
+            <p class="card-text">Studio • 480 sqft • ₹30,000/month • Utilities & Wi-Fi included.</p>
+
+            <a href="#" class="btn btn-primary justify-content-center align-self-center add-to-review">Add to review</a>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  <div class="container-fluid p-1" style="background-color: #e3f2fd;">
+    <div class="row p-2" >
+      <div class="col-12">
+        <h3 class="display-8 text-center mb-3 p-2">The every Indain complete their Home dream connect with Apna Ghar</h3>
+      </div>
+    </div>
+    <div class="row justify-content-evenly mt-4 mb-5">
+      <div class="col-md-3 text-center">
+        <h1><i class="bi bi-claude text-success"></i></h1>
+        <h5>build for devlopers</h5>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, aliquam.</p>
+      </div>
+      <div class="col-md-3 text-center">
+        <h1><i class="bi bi-house-door-fill text-danger"></i></h1>
+        <h5>build for devlopers</h5>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, aliquam.</p>
+
+
+      </div>
+      <div class="col-md-3 text-center">
+        <h1><i class="bi bi-bar-chart-fill text-primary "></i></h1>
+        <h5>build for devlopers</h5>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, aliquam.</p>
+
+
+      </div>
+
+    </div>
+  </div>
+  <hr style="border: 1px solid black;">
+  <div class="container-fluid" style="background-color: #e3f2fd;">
+
+    <div class="row d-flex align-items-center justify-content-around " ;>
+
+      
+
+      <div class="col-3 mt-5">
+
+        <ul class="list-unstyled text-primary">
+
+          <h5 class="text-dark">Quick Links</h5>
+
+          <li>Home</li>
+
+          <li>services</li>
+
+          <li>review</li>
+
+          <li>contact</li>
+
+
+
+        </ul>
+
+
+
+      </div>
+
+      <div class="col-3 mt-5">
+
+        <ul class="list-unstyled">
+
+          <h5>Conncet Us</h5>
+
+          <li class="mb-2"><i class="bi bi-facebook"></i></li>
+
+          <li class="mb-2"><i class="bi bi-instagram"></i></li>
+
+          <li class="mb-2"><i class="bi bi-linkedin"></i></li>
+
+          <li class="mb-2"><i class="bi bi-twitter"></i></li>
+
+        </ul>
+
+
+
+      </div>
+      <div class="col-3 mt-5">
+          <ul class="list-unstyled">
+<h5>Get to Know Us</h5>
+<li>Careers</li>
+<li>Home</li>
+<li>About Apna ghar</li>
+<li>Investor Relations</li>
+<li>Real estate</li>
+<li>Builders</li>
+</ul>
+      </div>
+
+    </div>
+
+  </div>
+  <div class="container-fluid" style="background-color: #0b2947;">
+    <div class="row  text-center p-3 text-white">
+      <div class="col-12 mt-2">
+        <div class="footer-panel4">
+    <div class="pages">
+       <a> Conditions of Use</a>
+       <a>Privacy Notice</a>
+<a>Consumer Health Data Privacy Disclosure</a>
+<a>our Ads Privacy Choices</a>
+    </div>
+    <div class="copyright">
+        <p>© 1996-2026, Amazon.com, Inc. or its affiliates</p>
+    </div>
+</div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
